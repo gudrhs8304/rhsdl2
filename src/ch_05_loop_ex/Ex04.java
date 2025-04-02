@@ -21,7 +21,7 @@ public class Ex04 {
          */
 
         int sum = 0;
-        int loopCnt = 10;
+        int loopCnt = 5;
         Scanner sc = new Scanner(System.in);
         for (int i = 1; i <= loopCnt; i++) {
             System.out.print(i + "번째 정수를 입력해 주세요 >> ");
