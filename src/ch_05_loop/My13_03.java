@@ -27,7 +27,7 @@ public class My13_03 {
 //            System.out.print("음악을 재생하시겠습니까? (Y) >> ");
 //            answer = sc.nextLine();
 //
-//            if (answer.equals("Y")) {
+//            if (answer.equals("Y") || answer.equals("y")) {
 //                System.out.println("음악을 " + ++count + "번 재생했습니다.");
 //            }
 //        }

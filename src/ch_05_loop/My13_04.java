@@ -13,10 +13,12 @@ public class My13_04 {
             System.out.print("음악을 재생하시겠습니까? (Y) >> ");
             answer = sc.nextLine();
 
-            if (!(answer.equals("Y") || answer.equals("y"))) {
+            if (answer.equals("Y")) {
+                System.out.println("음악을 " + ++count + "번 재생했습니다.");
+            }
+            if (!answer.equals("Y")) {
                 break;
             }
-            System.out.println("음악을 " + ++count + "번 재생했습니다.");
         }
         System.out.println("재생종료");
         sc.close();

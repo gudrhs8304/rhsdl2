@@ -19,7 +19,9 @@ public class My13_05 {
                     break;
                 }
             }
-            if (answer.equals("N")) break;
+            if (answer.equals("N")) {
+                break;
+            }
             System.out.println("음악을 " + ++count + "번 재생했습니다.");
         }
         System.out.println("재생종료");
