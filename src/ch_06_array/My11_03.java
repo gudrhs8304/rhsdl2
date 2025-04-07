@@ -4,22 +4,28 @@ import java.util.Random;
 
 public class My11_03 {
     public static void main(String[] args) {
-        String[] students = {
-                "김민경", "권기쁨", "이상현", "이병민", "김형곤",
-                "엄주호", "남동하", "설현오", "이재욱", "박성원",
-                "김동환", "김소영", "김나은", "윤남웅", "윤서정"};
+        /*
+        로또 번호 생성기
+        * 로또의 특징
+         */
+        int[] numbers = new int[45];
 
-        for (int i = 0; i < students.length; i++) {
-            Random random = new Random();
-           int idx = random.nextInt(15 - 1);
-           String temp = students[0];
-           students[0] = students[idx];
-           students[idx] = temp;
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
+            System.out.print(numbers[i] + " "); // 1 ~ 45
         }
-        for (int i = 0; i <= 5; i++) {
-            System.out.print(students[i] + "/");
-            System.out.print(students[i + 1] + "/");
-            System.out.print(students[i + 2] + "\n");
+        System.out.println();
+
+        for (int i = 1; i <= 10000; i++) {
+            // swap
+//         Math.random() : 0.0 이상, 1.0 미만의 double 값의 난수를 균일한 분포로 반환
+            int idx = (int) (Math.random() * 45);
+            int temp = numbers[0];
+            numbers[0] = numbers[idx];
+            numbers[idx] = temp;
+        }
+        for (int i = 0; i < 6; i++) {
+            System.out.print(numbers[i] + " "); // 배열의 내용을 출력한다.
         }
     }
 }

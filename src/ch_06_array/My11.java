@@ -26,5 +26,7 @@ public class My11 {
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " "); // 배열의 내용을 출력한다.
         }
+
+
     }
 }
