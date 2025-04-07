@@ -31,7 +31,7 @@ public class Ex26 {
         }
 
         // isFlag가 true이면 for문안의 if (arr[i] == num) 참이었다는 추론이 가능
-        // ifFlag가 false이면 for문안의 if문안의 명령문이 실행이 안되었음. 그러니 반복문을 빠져 나옴.
+        // isFlag가 false이면 for문안의 if문안의 명령문이 실행이 안되었음. 그러니 반복문을 빠져 나옴.
 
         if (!isFlag) {
             System.out.println("배열에 존재하지 않습니다.");
