@@ -26,15 +26,27 @@ public class Ex32 {
         Scanner sc = new Scanner(System.in);
         int[] answers = new int[3];
         int count = 0;
-        boolean isFlag = true;
 
-        while (isFlag) {
+        while (true) {
+            boolean flag = false;
             System.out.print("주사위 값은 얼마일까요? >>> ");
             int answer = sc.nextInt();
 
-            answers[count] = answer;
-            count++;
+            // 1. 사용자가 입력한 값이 중복이 있는지 확인
+            for(int i = 0; i < answers.length; i++) {
+                if (answers[i] == answer) {
+                    flag = true;
+                    break;
+                }
+            }
 
+            // 2. 중복된 값이 없으면 배열에 저장
+            if (!flag){
+                answers[count] = answer;
+                count++;
+            }
+
+            // 3. 3번째의 중복없는 값이면 정답처리
             if (count ==3){
                 System.out.println(answer +"! 정답입니다.");
                 break;
